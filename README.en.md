@@ -9,16 +9,19 @@ Software architecture description
 
 #### Installation
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  If you want to control the nixie tube to display some numbers through aip650 or tm1650, 
+	you can just use the "sendFullCmd" fucation to realize your idea.
+
+2. remember the data format is {[0x48 + brightness], [0x68 + number1], [0x6A + number2], [0x6C + number3], [0x6E + number4]}
+
+3. The "copycmd" function provides an example: the numbers 1 - 4 show B 8 3 0 respectively.
+
+4. The IO drive speed in this drive is very high. The test passed on stm32f030f4p6. Other hardware platforms can adjust the size of "#define time_uint 1" in aip650. H
 
 #### Instructions
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
+1.  What's more, it can be change to any hardware platform too，if you change the "SDA_Output"、"SDA_Input" 
+	and the "define"s for control the SCL GPIO and SDA GPIO
 #### Contribution
 
 1.  Fork the repository
